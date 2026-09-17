@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SR Web Developer - Professional websites, custom designs, branding and website maintenance by Ajith R.">
+  <title>SR Web Developer | Ajith R</title>
+  <style>
+    :root{
+      --bg:#030811; --card:#071321; --cyan:#00eaff; --blue:#176cff;
+      --text:#f5f7fb; --muted:#aebbd0; --line:rgba(0,234,255,.22);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+      color:var(--text); background:
+      radial-gradient(circle at 75% 10%,rgba(0,234,255,.12),transparent 30%),
+      radial-gradient(circle at 15% 55%,rgba(23,108,255,.12),transparent 28%),var(--bg);
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    nav{
+      position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);
+      background:rgba(3,8,17,.78);border-bottom:1px solid var(--line)
+    }
+    .navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px}
+    .brand img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--cyan)}
+    .brand span{font-size:18px}.brand b{color:var(--cyan)}
+    .links{display:flex;gap:26px;color:#dbe7f7;font-size:14px}
+    .links a:hover{color:var(--cyan)}
+    .menu{display:none;background:none;border:0;color:white;font-size:25px}
+    .hero{min-height:88vh;display:grid;place-items:center;padding:70px 0}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
+    .eyebrow{color:var(--cyan);font-weight:700;letter-spacing:4px;text-transform:uppercase;font-size:13px}
+    h1{font-size:clamp(42px,6vw,76px);line-height:1.02;margin:16px 0}
+    h1 span{background:linear-gradient(90deg,#fff,var(--cyan),#2674ff);-webkit-background-clip:text;color:transparent}
+    .hero p{max-width:620px;color:var(--muted);font-size:18px}
+    .tag{margin:22px 0;font-size:20px;color:#fff;font-weight:700}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+    .btn{padding:13px 22px;border-radius:12px;border:1px solid var(--cyan);font-weight:800}
+    .primary{background:linear-gradient(90deg,var(--cyan),#2773ff);color:#02101a;border:0}
+    .secondary{background:rgba(255,255,255,.03)}
+    .hero-card{display:grid;place-items:center;padding:32px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,rgba(7,19,33,.9),rgba(2,8,17,.7));box-shadow:0 0 70px rgba(0,234,255,.08)}
+    .hero-card img{width:min(100%,390px);border-radius:22px}
+    section{padding:90px 0}
+    .section-title{text-align:center;margin-bottom:45px}
+    .section-title small{color:var(--cyan);font-weight:800;letter-spacing:3px;text-transform:uppercase}
+    .section-title h2{font-size:38px;margin-top:8px}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{padding:28px 22px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,rgba(7,19,33,.85),rgba(4,10,19,.75));transition:.25s}
+    .card:hover{transform:translateY(-6px);border-color:rgba(0,234,255,.65);box-shadow:0 12px 35px rgba(0,234,255,.08)}
+    .icon{font-size:30px;color:var(--cyan);margin-bottom:12px}.card h3{margin-bottom:8px}.card p{color:var(--muted);font-size:14px}
+    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:stretch}
+    .panel{padding:34px;border:1px solid var(--line);border-radius:22px;background:rgba(7,19,33,.7)}
+    .panel h3{font-size:28px;margin-bottom:15px}.panel p{color:var(--muted)}
+    .checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+    .checks div{padding:12px;border-radius:10px;background:rgba(0,234,255,.06);border:1px solid rgba(0,234,255,.12)}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .contact a{display:flex;gap:14px;align-items:flex-start;padding:18px;border:1px solid var(--line);border-radius:14px;background:rgba(7,19,33,.65)}
+    .contact strong{display:block}.contact span{color:var(--muted);font-size:14px;word-break:break-word}
+    footer{padding:28px 0;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:13px}
+    .glow{position:fixed;width:180px;height:180px;border-radius:50%;filter:blur(80px);background:rgba(0,234,255,.08);pointer-events:none;right:-50px;bottom:10%}
+    @media(max-width:850px){
+      .links{display:none}.menu{display:block}
+      .hero-grid,.about,.contact{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+      .hero{padding-top:45px}
+    }
+    @media(max-width:520px){
+      .grid,.checks{grid-template-columns:1fr}
+      .navin{height:64px}.brand span{font-size:15px}
+      section{padding:65px 0}.section-title h2{font-size:31px}
+      .hero p{font-size:16px}
+    }
+  </style>
+</head>
+<body>
+<div class="glow"></div>
+
+<nav>
+  <div class="container navin">
+    <a class="brand" href="#home">
+      <img src="logo.jpg" alt="SR Web Developer logo">
+      <span>SR <b>WEB DEVELOPER</b></span>
+    </a>
+    <div class="links">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </div>
+    <button class="menu" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+  </div>
+</nav>
+
+<main id="home">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Websites • Brands • Online</div>
+        <h1>Build a <span>Powerful Digital Presence.</span></h1>
+        <p>Modern, fast and responsive websites designed to help businesses, creators and personal brands grow online.</p>
+        <div class="tag">Your Ideas • Our Code • Your Success</div>
+        <div class="buttons">
+          <a class="btn primary" href="https://wa.me/918123193676?text=Hi%20Ajith%2C%20I%20need%20a%20website." target="_blank">WhatsApp Me</a>
+          <a class="btn secondary" href="#services">Explore Services</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="logo.jpg" alt="SR Web Developer">
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-title"><small>What I Do</small><h2>Professional Digital Services</h2></div>
+      <div class="grid">
+        <div class="card"><div class="icon">◉</div><h3>Website Development</h3><p>Business, personal, portfolio and e-commerce websites.</p></div>
+        <div class="card"><div class="icon">&lt;/&gt;</div><h3>Custom Designs</h3><p>Modern, responsive and user-friendly layouts built for every screen.</p></div>
+        <div class="card"><div class="icon">◆</div><h3>Brand Solutions</h3><p>Professional digital identity, landing pages and social-ready branding.</p></div>
+        <div class="card"><div class="icon">⚙</div><h3>Website Maintenance</h3><p>Updates, improvements, security support and ongoing assistance.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container about">
+      <div class="panel">
+        <h3>Why Choose SR?</h3>
+        <p>Clean design, practical development and a strong focus on mobile users. The goal is simple: make your online presence look professional and work smoothly.</p>
+        <div class="checks">
+          <div>✓ Creative Designs</div><div>✓ Clean Code</div>
+          <div>✓ Fast Loading</div><div>✓ Mobile Responsive</div>
+          <div>✓ Affordable Pricing</div><div>✓ Friendly Support</div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Ajith R</h3>
+        <p style="color:var(--cyan);font-weight:800;margin-bottom:12px">WEB DEVELOPER</p>
+        <p>From a simple website to a complete digital presence, SR Web Developer helps turn your ideas into an online experience that represents your brand.</p>
+        <div class="buttons">
+          <a class="btn primary" href="mailto:srwebdeveloper17@gmail.com">Email Me</a>
+          <a class="btn secondary" href="https://www.instagram.com/SR.web_developer_17/" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-title"><small>Let's Work Together</small><h2>Get In Touch</h2></div>
+      <div class="contact">
+        <a href="tel:+918123193676"><div class="icon">☎</div><div><strong>Call / WhatsApp</strong><span>8123193676</span></div></a>
+        <a href="mailto:srwebdeveloper17@gmail.com"><div class="icon">✉</div><div><strong>Email</strong><span>srwebdeveloper17@gmail.com</span></div></a>
+        <a href="https://www.instagram.com/SR.web_developer_17/" target="_blank"><div class="icon">◎</div><div><strong>Instagram</strong><span>SR.web_developer_17</span></div></a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Mahadeshwar+Nagar+5th+Cross+Herohalli+Cross+Magdi+Road+Bangalore+560091" target="_blank"><div class="icon">⌖</div><div><strong>Location</strong><span>Mahadeshwar Nagar 5th Cross, Herohalli Cross Magdi Road, Bangalore 560091, Karnataka</span></div></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 SR Web Developer • Ajith R • Your Ideas • Our Code • Your Success</footer>
+
+<script>
+function toggleMenu(){
+  const links=document.querySelector('.links');
+  links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+  if(innerWidth<=850){
+    links.style.position='absolute'; links.style.top='64px'; links.style.right='4%';
+    links.style.flexDirection='column'; links.style.padding='18px';
+    links.style.background='rgba(3,8,17,.97)'; links.style.border='1px solid rgba(0,234,255,.22)';
+    links.style.borderRadius='14px';
+  }
+}
+</script>
+</body>
+</html>
